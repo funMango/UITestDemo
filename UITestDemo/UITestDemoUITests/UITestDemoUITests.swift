@@ -27,9 +27,11 @@ final class UITestDemoUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        let welcome = app.staticTexts["Welcome!"]
+        let welcome = app.staticTexts.element
         
         XCTAssert(welcome.exists)
+        XCTAssertEqual(welcome.label, "Welcome!")
+        
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
