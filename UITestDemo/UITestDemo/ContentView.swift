@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isLogined = false
     var body: some View {
         VStack {
            Text("Welcome!")
             
             Button {
-                
+                isLogined = true
             } label: {
-                Text("continue")
+                Text("Login")
             }
         }
         .padding()

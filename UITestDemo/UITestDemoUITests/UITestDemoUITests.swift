@@ -31,9 +31,15 @@ final class UITestDemoUITests: XCTestCase {
         
         XCTAssert(welcome.exists)
         XCTAssertEqual(welcome.label, "Welcome!")
+    }
+    
+    func testLoginBtn() throws {
+        let app = XCUIApplication()
+        app.launch()
         
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let login = app.buttons["Login"]
+        
+        XCTAssert(login.exists)
     }
 
     func testLaunchPerformance() throws {
